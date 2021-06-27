@@ -1,5 +1,7 @@
+
 body {
   font-family: "Lato", sans-serif;
+  
 }
 
 h2 {
@@ -141,54 +143,98 @@ footer p {
 } */
 
 /* -------  Media Query ------- */
-
-@media all and (min-width: 600px){
-
-  .container {
+  
+  @media (min-width: 480px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    
+    nav ul {
+      display: flex;
+      padding: 0;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin-left: 2em;
+    }
+  
+  form {
+    flex-direction: row;
+  }
+  
+  .group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
+    .grid-row {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+    }
   
   
-  nav ul {
-    display: flex;
-    padding: 0;
-    justify-content: center;
-  }
+    .grid-col {
+      display: flex;
+      flex-direction: column;
+      margin: 11px;
+      padding: 10px;
+      width: 50%;
+    }
   
-  nav li {
-    margin-left: 2em;
-  }
-
-form {
-  flex-direction: row;
-}
-
-.group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-  .grid-row {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
+    .col-sm {
+      width: 45%;
+    }
+    
   }
 
 
-  .grid-col {
-    display: flex;
-    flex-direction: column;
-    margin: 11px;
-    padding: 10px;
-    width: 50%;
+  @media (max-width: 680px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid #ff385c;
+      padding: 10px;
+    }
+    .group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: start;
+    }
+    
+    .item {
+      flex: 1;
+      margin:10px;
+    }
+    
+    .item-double {
+      flex: 2;
+    }
+    
+    .grid-row {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
-  .col-sm {
-    width: 45%;
-  }
 
-  }
-  
